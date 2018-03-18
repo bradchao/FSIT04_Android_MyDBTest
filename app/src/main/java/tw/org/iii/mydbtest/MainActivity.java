@@ -38,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
         query(null);
     }
     public void update(View view) {
+        ContentValues values = new ContentValues();
+        values.put("cname", "趙令文");
+        values.put("birthday", "1999-03-04");
+        db.update("cust",values, "id=?", new String[]{"4"});
+        query(null);
     }
     public void query(View view) {
         // select * from cust
