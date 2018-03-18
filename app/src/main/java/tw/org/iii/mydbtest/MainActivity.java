@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
         query(null);
     }
     public void delete(View view) {
+        // delete from cust where id=2
+        db.delete("cust", "id=?", new String[]{"2"});
+        query(null);
     }
     public void update(View view) {
     }
